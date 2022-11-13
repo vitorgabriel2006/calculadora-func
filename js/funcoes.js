@@ -4,29 +4,27 @@ function Calculadora(){
     c = document.getElementById("c").value;
 
     delta = eval(parseFloat((b * b) -4 * a * c));
-    document.getElementById("mostrar-resultado").innerHTML = delta;
+    document.getElementById("mostrar-resultado").innerHTML = "Δ = " + delta;
 
     if(delta < 0){
-        document.write("Para delta negativo não existem raizes reais!");
-         x1 = eval(parseFloat((-b + Math.sqrt(delta)) / (2 * a)));
-         x2 = eval(parseFloat((-b - Math.sqrt(delta)) / (2 * a)));
-         document.getElementById("mostrar-resultado1").innerHTML = x1;
-         document.getElementById("mostrar-resultado2").innerHTML = x2;
+        delta = eval(parseFloat((b * b) -4 * a * c));
+        document.getElementById("mostrar-resultado").innerHTML = "Δ = " + delta;
+        document.getElementById("mostrar-resultado1").innerHTML = "O delta é negativo. Equação não possui raízes reais.";
          
 
 
     } else if(delta == 0){
       x1 = eval(parseFloat((-b + Math.sqrt(delta)) / (2 * a)));
       
-      document.getElementById("mostrar-resultado1").innerHTML = x1;
+      document.getElementById("mostrar-resultado1").innerHTML = "X1 e X2 = " + x1;
       
       
 
     }else{
         x1 = eval(parseFloat((-b + Math.sqrt(delta)) / (2 * a)));
         x2 = eval(parseFloat((-b - Math.sqrt(delta)) / (2 * a)));
-        document.getElementById("mostrar-resultado1").innerHTML = x1;
-        document.getElementById("mostrar-resultado2").innerHTML = x2
+        document.getElementById("mostrar-resultado1").innerHTML = "X1 = " + x1;
+        document.getElementById("mostrar-resultado2").innerHTML = "X2 = " + x2
     }
 }
 
