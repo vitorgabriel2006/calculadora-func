@@ -5,63 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <title>Equações básicas</title>
 </head>
 <script src="js/funcoes.js" type="text/javascript"> </script>
 <body>
-    <div class="fundo">
-        <div class="calculadora">
-           <h1>calculadora</h1>
-           <p id="resultado"></p>
-           <table>
-               <tr>
-                   <td> <button class="botao" onclick="clean()">C</button></td>
-                   <td> <button class="botao" onclick="back()"><</button></td>
-                   <td> <button class="botao" onclick="insert('/')">/</button></td>
-                   <td> <button class="botao" onclick="insert('*')">X</button></td>
-   
-   
-   
-               </tr>
-   
-               <tr>
-                   <td> <button class="botao" onclick="insert('7')">7</button></td>
-                   <td> <button class="botao" onclick="insert('8')">8</button></td>
-                   <td> <button class="botao" onclick="insert('9')">9</button></td>
-                   <td> <button class="botao" onclick="insert('-')">-</button></td>
-   
-   
-   
-               </tr>
-   
-               <tr>
-                   <td> <button class="botao" onclick="insert('4')">4</button></td>
-                   <td> <button class="botao" onclick="insert('5')">5</button></td>
-                   <td> <button class="botao" onclick="insert('6')">6</button></td>
-                   <td> <button class="botao" onclick="insert('+')">+</button></td>
-   
-   
-   
-               </tr>
-   
-               <tr>
-                   <td> <button class="botao" onclick="insert('1')">1</button></td>
-                   <td> <button class="botao" onclick="insert('2')">2</button></td>
-                   <td> <button class="botao" onclick="insert('3')">3</button></td>
-                   <td rowspan= "2"> <button class="botao" onclick="calcular()" style="height: 106px;">=</button></td>
-   
-   
-   
-               </tr>
-   
-               <tr>
-                   <td colspan="2"> <button class="botao" onclick="insert('0')" style="width: 106px;">0</button></td>
-                   <td> <button class="botao" onclick="insert('.')">.</button></td>
-               </tr>
-           </table>
-        </div>
-   
-       </div>
+  <div class="wrapper">
+    <!--inicio navbar-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <a class="navbar-brand" href="index.html">Início</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav">
+         <li class="nav-item active">
+           <a class="nav-link" href="potencia.html">potência </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="bhaskara.html">Bhaskara</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="raiz.html">Raiz Quadrada</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="area.html">Área do triângulo</a>
+         </li>
+       </ul>
+     </div>
+     </nav>
+ <!--fim da navbar-->
+
+<center>
+
+
+
+
+
+
+<input type="text" id="num1" size="15" placeholder="Digite um número:"> <br>
+<input type="text" id="num2" size="15" placeholder="Digite um número:"> <br>
+<input class="text2" type="radio" name="opt" value="+"> <h10 class="text2">Adição</h10>
+<input type="radio" name="opt" value="-"> <h10 class="text2">Subtração</h10>
+<input type="radio" name="opt" value="*"> <h10 class="text2">Multiplicação</h10>
+<input type="radio" name="opt" value="/"> <h10 class="text2">Divisão</h10>
+
+<br>
+<button onclick="basicas()">Calcular</button>
+
+<h3 class="text2">Resultado</h3>
+    <!-- Mostrar aqui o resultado-->
+    <p class="text2" id="mostrar-resultado">
+
+    </p>
+
+
+
+
+
+
+
+
+<center>
+
+
+
+
+
+
+
+
+
+
+ <!--começo da footer-->
+
+ <footer class="text-center text-white fixed-bottom bg-dark">
+  <!-- Grid container -->
+  <div class="container p-4"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://github.com/vitorgabriel2006">vitorgabriel2006</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</div>
+
+  </div>
+
+
 
 </body>
 </html>
